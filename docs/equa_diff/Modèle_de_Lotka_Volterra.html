@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Modèle de Lotka Volterra &#8212; Python I, FIP, L3</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=362ab14a" />
+    <link rel="stylesheet" type="text/css" href="../_static/agogo.css?v=47acb022" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Transformée de Fourier" href="../Fourier.html" />
+    <link rel="prev" title="Chaîne de ressorts" href="chaine_de_ressorts.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Python I, FIP, L3</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="chaine_de_ressorts.html" title="Chaîne de ressorts"
+             accesskey="P">previous</a> |
+          <a href="../Fourier.html" title="Transformée de Fourier"
+             accesskey="N">next</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section class="tex2jax_ignore mathjax_ignore" id="modele-de-lotka-volterra">
+<h1>Modèle de Lotka Volterra<a class="headerlink" href="#modele-de-lotka-volterra" title="Link to this heading">¶</a></h1>
+<p>On considère l’équation diférentielle suivante :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-9bd5ecc8-cf23-4240-824b-1dd037794db6">
+<span class="eqno">(1)<a class="headerlink" href="#equation-9bd5ecc8-cf23-4240-824b-1dd037794db6" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray}
+    \frac{\mathrm d L}{\mathrm d t} = 2L - 0.2 LR \\
+    \frac{\mathrm d R}{\mathrm d t} = -30R + 0.15 LR    
+\end{eqnarray}\]</div>
+<p>Il s’agit d’un modèle qui décrit une population de renards <span class="math notranslate nohighlight">\(R\)</span> et une population de lapins <span class="math notranslate nohighlight">\(L\)</span> qui se partagent le même territoire.</p>
+<p>Le coefficient 2 est le taux de croissance des lapins en l’absence de renards, d’où le signe positif, 30 est le taux de décroissance des renards en l’absence de lapins, d’où le signe négatif, 0.2 est un coefficient exprimant que les rencontres tournent mal pour les lapins, d’où le -, 0.15 est un coefficient exprimant que les rencontres sont bénéfiques aux renards, d’où le +.</p>
+<ol class="arabic simple">
+<li><p>Résoudre cette équation pour <span class="math notranslate nohighlight">\(L_0 = 150\)</span> et <span class="math notranslate nohighlight">\(R_0 = 5\)</span> et tracer l’évolution jusque <span class="math notranslate nohighlight">\(t=10\)</span>.</p></li>
+<li><p>Avec les même paramètres, tracer la valeur absolue de la transformée de Fourier numérique du nombre de lapin (en prenant t=100) et donner approximativement la fréquence fondamentale du signal.</p></li>
+</ol>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../notebook.html">Géneralités sur Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../numpy.html">Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../statistiques.html">Ajustements de courbes et statistiques</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../equa_diff.html">Equations différentielles</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pendule.html">Le pendule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="schrodinger_etat_comprime.html">Equation de Schrödinger et états comprimés</a></li>
+<li class="toctree-l2"><a class="reference internal" href="piege_penning.html">Piège de Penning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nuage_ions.html">Nuage d’ions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chaine_de_ressorts.html">Chaîne de ressorts</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Modèle de Lotka Volterra</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Fourier.html">Transformée de Fourier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../problemes.html">Problèmes</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="chaine_de_ressorts.html" title="Chaîne de ressorts"
+              >previous</a> |
+            <a href="../Fourier.html" title="Transformée de Fourier"
+              >next</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+              <br/>
+              <a href="../_sources/equa_diff/Modèle_de_Lotka_Volterra.ipynb.txt"
+                rel="nofollow">Show Source</a>
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+    &#169; Copyright .
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
