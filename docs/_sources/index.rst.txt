@@ -1,7 +1,7 @@
 Exercices Python
 ================
 
-L'ensemble des liens et resources pour ce cours se trouveront ici : `github.com/clade/InfoFIP2024 <https://github.com/clade/InfoFIP2024>`_.
+L'ensemble des liens et resources pour ce cours se trouveront ici : `github.com/clade/InfoFIP2025 <https://github.com/clade/InfoFIP2024>`_.
 
 
 
