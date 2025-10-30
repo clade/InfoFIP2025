@@ -1,0 +1,12 @@
+# Equations différentielles
+
+```{toctree}
+:maxdepth: 2
+
+./equa_diff/pendule.ipynb
+./equa_diff/schrodinger_etat_comprime.ipynb
+./equa_diff/piege_penning.ipynb
+./equa_diff/nuage_ions.ipynb
+./equa_diff/chaine_de_ressorts.ipynb
+./equa_diff/Modèle_de_Lotka_Volterra.ipynb
+```
